@@ -39,7 +39,7 @@ def root():
   print(htmlContent)
 
   exchangePrice = re.findall(PRICE_RE, htmlContent)[0].replace("Current price of Bitcoin is USD $", "").replace(",", "")
-  exchangeVolume = re.findall(VOLUME_RE, htmlContent)[0].replace("24-hour trading volume of $", "").replace(",", "")
+  exchangeVolume = re.findall(VOLUME_RE, htmlContent)[0].replace("24-hour trading volume of $", "").replace(".", "").replace(",", "")
   exchangeChange = re.findall(CHANGE_RE, htmlContent)[0].replace("price is up ", "").replace("% in the last 24 hours.", "").replace(",", "")
 
   return toJSON(requestedCrypto, exchangePrice, exchangeVolume, exchangeChange)
