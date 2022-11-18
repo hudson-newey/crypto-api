@@ -36,7 +36,7 @@ def root():
     return "Failed to fetch remote exchange website"
   
   htmlContent = exchange.text
-  print(htmlContent)
+  # print(htmlContent)
 
   exchangePrice = re.findall(PRICE_RE, htmlContent)[0].replace("Current price of Bitcoin is USD $", "").replace(",", "")
   exchangeVolume = re.findall(VOLUME_RE, htmlContent)[0].replace("24-hour trading volume of $", "").replace(".", "").replace(",", "")
