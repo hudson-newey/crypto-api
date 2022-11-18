@@ -1,0 +1,5 @@
+BASE_URL="https://www.coingecko.com/en/coins/"
+MATCHING_RE=r"\<meta name\=\"description\" content\=\".+\""
+PRICE_RE=r"Current price of Bitcoin is USD \$[0-9,]*\.[0-9]*"
+VOLUME_RE=r"24\-hour trading volume of \$[0-9,]*\."
+CHANGE_RE=r"price is up [0-9\.,]*\% in the last 24 hours\."
