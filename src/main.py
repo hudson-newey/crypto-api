@@ -9,7 +9,7 @@ from static import *
 app = Flask(__name__)
 
 def toJSON(coin = None, price = None, volume = None, change = None):
-  return "{ coin: \"" + str(coin) + "\", date: \"" + getDate() + "\", timeHour: \"" + getTimeHour() + "\", timeMinute: \"" + getTimeMinute() + "\", price: " + str(price) + ", volume: " + str(volume) + ", change: " + str(change) + " }"
+  return "{ \"coin\": \"" + str(coin) + "\", \"date\": \"" + getDate() + "\", \"timeHour\": \"" + getTimeHour() + "\", \"timeMinute\": \"" + getTimeMinute() + "\", \"price\": \"" + str(price) + "\", \"volume\": \"" + str(volume) + "\", \"change\": \"" + str(change) + "\" }"
 
 def getDate():
   return str(datetime.now())
